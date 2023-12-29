@@ -122,6 +122,10 @@ const appRouter = createBrowserRouter([
                 element: <ContactUs />
             },
             {
+                path: "/applications",
+                element: <Chemical />
+            },
+            {
                 path: "/applications/chemical",
                 element: <Chemical />
             },
@@ -168,6 +172,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/products/alkydbasedpaints",
                 element: <AlkydBasedPaints />
+            },
+            {
+                path: "/products",
+                element: <EpoxyPaints />
             },
             {
                 path: "/epoxypaints",
