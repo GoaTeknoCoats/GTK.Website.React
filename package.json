@@ -1,0 +1,35 @@
+{
+  "name": "gtk.website",
+  "version": "1.0.0",
+  "description": "GTK Website Developed Using React",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoaTeknoCoats/GTK.Website.React.git"
+  },
+  "author": "Gouresh Phadke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoaTeknoCoats/GTK.Website.React/issues"
+  },
+  "homepage": "https://github.com/GoaTeknoCoats/GTK.Website.React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.10.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}

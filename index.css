@@ -1,0 +1,324 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.navbar {
+  z-index: 1;
+}
+
+.navbar-brand img {
+  width: 6rem;
+  height: 3rem;
+}
+
+.dropdown-item {
+  font-size: 1.25rem;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-item .nav-link:hover {
+  font-weight: 700;
+  color: steelblue !important;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+  background-color: aliceblue;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.carousel-caption {
+  top: 20%;
+  bottom: auto;
+  z-index: 0;
+  color: khaki;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.about-us img {
+  width: 100%;
+}
+
+.about-us .centered {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  .about-us .centered h1 {
+      background-color: rgba(44, 130, 201, 0.8);
+  }
+
+  .about-us .centered p {
+      font-size: 1.10rem;
+  }
+
+.about-us .more-details p {
+  margin-top: 10px;
+}
+
+.more-details .brush {
+  display: inline;
+  width: 6.5rem;
+  transform: rotate(45deg);
+  left: 100%;
+}
+
+.more-details .brush-container {
+  position: absolute;
+  top: -18px;
+}
+
+.more-details h1.has-brush {
+  background-image: linear-gradient(45deg, red, yellow);
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+  .more-details h1.has-brush span {
+      line-height: 4rem;
+  }
+
+.more-details h1 span {
+  opacity: 0;
+}
+
+.more-details h1.has-brush {
+  -webkit-animation: title-animation 1.5s ease forwards;
+}
+
+.more-details h1 span {
+  -webkit-animation: title-text-animation 0s ease forwards 1s;
+}
+
+.more-details .brush-container {
+  -webkit-animation: brush-run-animation 1.5s ease forwards;
+}
+
+.more-details .brush {
+  -webkit-animation: brush-hide-animation 0s ease forwards 1.5s;
+}
+
+@-webkit-keyframes title-animation {
+  from {
+      width: 0%;
+  }
+
+  to {
+      width: 100%;
+  }
+}
+
+@-webkit-keyframes title-text-animation {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes brush-run-animation {
+  from {
+      left: 0;
+  }
+
+  to {
+      left: 100%;
+  }
+}
+
+@-webkit-keyframes brush-hide-animation {
+  from {
+      width: 100%;
+  }
+
+  to {
+      width: 0%;
+  }
+}
+
+.fa-gtk-color-1 {
+  color: cadetblue;
+}
+
+.display-4 {
+  font-size: 2rem;
+}
+
+.nav-link, .dropdown-item {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+header {
+  background-color: aliceblue;
+}
+
+.main-content {
+  background-color: aliceblue;
+}
+
+footer .container {
+  color: aliceblue;
+  background-color: black;
+  max-width: 100%;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.dropdown-menu {
+  background-color: aliceblue;
+}
+
+img.zoom {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+}
+
+  img.zoom:hover {
+      box-shadow: 0 0 5px 2px red;
+  }
+
+@media(max-width: 767px) {
+  .display-4 {
+      font-size: 1.5rem;
+      font-weight: 400;
+  }
+
+  .divider {
+      height: 1px;
+      overflow: hidden;
+      margin: 0 0 3px 0;
+      background-color: lightgray;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+
+  .carousel-caption {
+      top: 30%;
+  }
+
+  .navbar-nav {
+      padding-right: 3vw;
+  }
+
+  .nav-item {
+      height: 4rem;
+      line-height: 3rem;
+      padding: 0px 1vw;
+      width: 10rem;
+  }
+
+  .dropdown-item {
+      height: 2rem;
+      line-height: 1.5rem;
+  }
+
+  .dropdown-menu {
+      top: calc(100% - 2px);
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+      background: none !important;
+      color: steelblue !important;
+  }
+
+  .dropdown > .dropdown-toggle:active {
+      pointer-events: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  ul.h4 {
+      font-size: 2.1vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-us .centered {
+      top: 15%;
+  }
+}
