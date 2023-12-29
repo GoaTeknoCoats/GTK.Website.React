@@ -102,7 +102,15 @@ const appRouter = createBrowserRouter([
                 element: <Home />
             },
             {
+                path: "/home/index",
+                element: <Home />
+            },
+            {
                 path: "/aboutus",
+                element: <AboutUs />
+            },
+            {
+                path: "/home/aboutus",
                 element: <AboutUs />
             },
             {
@@ -110,20 +118,44 @@ const appRouter = createBrowserRouter([
                 element: <ContactUs />
             },
             {
+                path: "/home/contactus",
+                element: <ContactUs />
+            },
+            {
+                path: "/applications/chemical",
+                element: <Chemical />
+            },
+            {
                 path: "/chemical",
                 element: <Chemical />
+            },
+            {
+                path: "/applications/damsandpipeline",
+                element: <DamsAndPipeline />
             },
             {
                 path: "/damsandpipeline",
                 element: <DamsAndPipeline />
             },
             {
+                path: "/applications/floor",
+                element: <Floor />
+            },
+            {
                 path: "/floor",
                 element: <Floor />
             },
             {
+                path: "/applications/industrial",
+                element: <Industrial />
+            },
+            {
                 path: "/industrial",
                 element: <Industrial />
+            },
+            {
+                path: "/applications/marine",
+                element: <Marine />
             },
             {
                 path: "/marine",
@@ -134,11 +166,23 @@ const appRouter = createBrowserRouter([
                 element: <AlkydBasedPaints />
             },
             {
+                path: "/products/alkydbasedpaints",
+                element: <AlkydBasedPaints />
+            },
+            {
                 path: "/epoxypaints",
                 element: <EpoxyPaints />
             },
             {
+                path: "/products/epoxypaints",
+                element: <EpoxyPaints />
+            },
+            {
                 path: "/polyurethanepaints",
+                element: <PolyUrethanePaints />
+            },
+            {
+                path: "/products/polyurethanepaints",
                 element: <PolyUrethanePaints />
             }
         ]
