@@ -15,10 +15,28 @@ import PolyUrethanePaints from './components/products/PolyUrethanePaints'
 import gtkLogo from './images/gtk-logo.jpeg'
 
 const AppLayout = () => {
-    const [showDropdown, setShowDropdown] = useState(false);
+    const [showNavItems, setShowNavItems] = useState(false);
+    const [showNavItemProducts, setShowNavItemProducts] = useState(false);
+    const [showNavItemApplications, setShowNavItemApplications] = useState(false);
     
-    const toggleNav = () => {
-        setShowDropdown(!showDropdown);
+    const toggleNavItems = () => {
+        setShowNavItems(!showNavItems);
+    }
+    const toggleNavItemProducts = () => {
+        setShowNavItemProducts(!showNavItemProducts);
+    }
+    const toggleNavItemApplications = () => {
+        setShowNavItemApplications(!showNavItemApplications);
+    }
+    const hideNavItems = () => {
+        hideNavItemProducts();
+        hideNavItemApplications();
+    }
+    const hideNavItemProducts = () => {
+        setShowNavItemProducts(false);
+    }
+    const hideNavItemApplications = () => {
+        setShowNavItemApplications(false);
     }
     
   return (
@@ -29,39 +47,39 @@ const AppLayout = () => {
                     <Link className="navbar-brand" to="/">
                         <img src={gtkLogo} />
                     </Link>
-                    <button onClick={() => { toggleNav() }} className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    <button onClick={() => { toggleNavItems() }} className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={(showDropdown ? 'show' : '') + ' navbar-collapse collapse d-md-inline-flex flex-md-row-reverse'}>
+                    <div className={(showNavItems ? 'show' : '') + ' navbar-collapse collapse d-md-inline-flex flex-md-row-reverse'}>
                         <ul className="navbar-nav flex-grow-1 h4 text-center justify-content-end">
                             <li className="nav-item">
                                 <Link to="/aboutus" className="nav-link text-dark">About Us</Link>
                             </li>
                             <li role="separator" className="divider"></li>
                             <li className="nav-item dropdown">
-                                <a href="/epoxypaints" className="nav-link text-dark dropdown-toggle" id = "ourProducts" data_toggle = "dropdown" aria_haspopup = "true" aria_expanded = "false">Our Products</a>
-                                <div className="dropdown-menu rounded-0 text-center" aria-labelledby="ourProducts">
-                                    <Link to="/epoxypaints" className="dropdown-item">Epoxy Paints</Link>
+                                <a onClick={() => { toggleNavItemProducts() }} aria-expanded="false" aria-haspopup="true" className="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" id="ourProducts">Our Products</a>
+                                <div className={(showNavItemProducts ? 'show' : '') + ' dropdown-menu rounded-0 text-center'} aria-labelledby="ourProducts">
+                                    <Link onClick={() => { hideNavItems() }} to="/epoxypaints" className="dropdown-item">Epoxy Paints</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/polyurethanepaints" className="dropdown-item">Poly Urethane Paints</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/polyurethanepaints" className="dropdown-item">Poly Urethane Paints</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/alkydbasedpaints" className="dropdown-item">Alkyd Based Paints</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/alkydbasedpaints" className="dropdown-item">Alkyd Based Paints</Link>
                                 </div>
                             </li>
                             <li role="separator" className="divider"></li>
                             <li className="nav-item dropdown">
-                                <a href="/epoxypaints" className="nav-link text-dark dropdown-toggle" id = "applications" data_toggle = "dropdown" aria_haspopup = "true" aria_expanded = "false">Applications</a>
-                                <div className="dropdown-menu rounded-0 text-center" aria-labelledby="applications">
-                                    <Link to="/marine" className="dropdown-item">Paints for Marine Application</Link>
+                                <a onClick={() => { toggleNavItemApplications() }} aria-expanded="false" aria-haspopup="true" className="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" id="applications">Applications</a>
+                                <div className={(showNavItemApplications ? 'show' : '') + ' dropdown-menu rounded-0 text-center'} aria-labelledby="applications">
+                                    <Link onClick={() => { hideNavItems() }} to="/marine" className="dropdown-item">Paints for Marine Application</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/damsandpipeline" className="dropdown-item">Paints for Dams and Pipeline</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/damsandpipeline" className="dropdown-item">Paints for Dams and Pipeline</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/industrial" className="dropdown-item">Industrial Paints</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/industrial" className="dropdown-item">Industrial Paints</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/chemical" className="dropdown-item">Paints for Chemical Plants</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/chemical" className="dropdown-item">Paints for Chemical Plants</Link>
                                     <div className="dropdown-divider"></div>
-                                    <Link to="/floor" className="dropdown-item">Floor Coatings</Link>
+                                    <Link onClick={() => { hideNavItems() }} to="/floor" className="dropdown-item">Floor Coatings</Link>
                                 </div>
                             </li>
                             <li role="separator" className="divider"></li>
